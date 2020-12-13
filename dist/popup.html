@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="popup.js"></script>
+</head>
+
+<body>
+  <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+    <a href="" name="runButton" class="btn-circle-border-simple">GO</a>
+  </div>
+  <div class="selectdiv">
+    <label>
+      <select name="slot" class="custom-select sources">
+        <option value="0" name="slotName0">Slot 1: 名称未設定</option>
+        <option value="1" name="slotName1">Slot 2: 名称未設定</option>
+        <option value="2" name="slotName2">Slot 3: 名称未設定</option>
+        <option value="3" name="slotName3">Slot 4: 名称未設定</option>
+        <option value="4" name="slotName4">Slot 5: 名称未設定</option>
+        <option value="5" name="slotName5">Slot 6: 名称未設定</option>
+        <option value="6" name="slotName6">Slot 7: 名称未設定</option>
+      </select>
+    </label>
+  </div>
+  <div style="font-size: 12px; text-align: center;">シートのチェックを反映できます。</div>
+  <div style="display: flex; flex-direction: column; width: 200px; align-items: center;">
+    <a href="#" name="options" target="_blank" rel="noopener noreferrer"
+      class="btn-flat-double-border"><img src="gear.svg" width="16" height="16"
+        style="margin-right: 5px;">チェックシートを開く</a>
+  </div>
+</body>
+
+</html>
+
+<style type="text/css">
+  .btn-flat-double-border {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 16px;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: rgb(255, 171, 158);
+    border: double 4px rgb(255, 171, 158);
+    border-radius: 3px;
+    transition: .4s;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .btn-flat-double-border:hover {
+    background: #fffbef;
+  }
+
+  body {
+    background: #f2f2f2;
+  }
+
+  .selectdiv {
+    position: relative;
+  }
+
+  /* IE11 hide native button (thanks Matt!) */
+  select::-ms-expand {
+    display: none;
+  }
+
+  .selectdiv:after {
+    content: '<>';
+    font: 17px "Consolas", monospace;
+    color: #333;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: 11px;
+    /*Adjust for position however you want*/
+
+    top: 18px;
+    padding: 0 0 2px;
+    border-bottom: 1px solid #999;
+    /*left line */
+
+    position: absolute;
+    pointer-events: none;
+  }
+
+  .selectdiv select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Add some styling */
+
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: 50px;
+    float: right;
+    margin: 5px 0px;
+    padding: 0px 24px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #333;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    -ms-word-break: normal;
+    word-break: normal;
+  }
+
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+
+  html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+
+  .btn-circle-border-simple {
+    margin: 20px 0;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 171, 158);
+    width: 120px;
+    height: 120px;
+    line-height: 115px;
+    border-radius: 50%;
+    border: solid 2px rgb(255, 171, 158);
+    text-align: center;
+    overflow: hidden;
+    font-weight: bold;
+    transition: .4s;
+    font-size: 20px;
+  }
+
+  .btn-circle-border-simple:hover {
+    background: rgb(255, 222, 200);
+  }
+</style>

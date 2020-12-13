@@ -1,0 +1,2340 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <script src="options.js"></script>
+  <script src="merger.js"></script>
+  <title>ポリンビンゴチェッカー</title>
+</head>
+
+<body></body>
+<div style="margin: 2px 0 0 10px; display: flex; flex-direction: column;">
+  <div>ポリンビンゴのチェック表です。こちらは実際のビンゴクリア状況に応じて各自チェックしてください。</div>
+  <div>
+    クエストのチェックマークはSNSにも反映されます。なお、SNS画面からこのチェック表への操作はできません。</div>
+  <div style="display: flex; align-items: center;">
+    <div><input type="checkbox" name="noInfoChecked"></div>
+    <div><b>チェック済みクエストはキャラクター列挙しない</b></div>
+  </div>
+  <div>&nbsp;&nbsp;↑必要に応じて切り替えてください</div>
+  <div style="display: flex; margin: 10px 0 5px 0; align-items: center;">
+    <div>
+      シート選択
+    </div>
+    <select name="slot" style="margin-left: 5px;">
+      <option value="0" name="slotName0">Slot 1: 名称未設定</option>
+      <option value="1" name="slotName1">Slot 2: 名称未設定</option>
+      <option value="2" name="slotName2">Slot 3: 名称未設定</option>
+      <option value="3" name="slotName3">Slot 4: 名称未設定</option>
+      <option value="4" name="slotName4">Slot 5: 名称未設定</option>
+      <option value="5" name="slotName5">Slot 6: 名称未設定</option>
+      <option value="6" name="slotName6">Slot 7: 名称未設定</option>
+    </select>
+    <input name="slotName" size="20" style="margin: 0 5px;">
+    <input type="button" name="nameButton" value="名前をつける">
+  </div>
+</div>
+<div class="parts" id="bingoOneTable">
+  <table style="border: 1px solid #CCCCCC; font-size: 0.9em;">
+    <tr>
+      <th class="partsHeading">
+        <div class="table_head">
+          <div></div>
+          <div>ポリンビンゴ１</div>
+          <div style="display: flex; align-items: center; line-height: 14px;">
+            <div>全部にチェック/外す</div>
+            <input type="checkbox" name="allCheck1" style="width: 14px; height: 14px;">
+          </div>
+        </div>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck0"></div>
+              <div>討伐</div>
+              <div>1</div>
+            </div>
+            <div>
+              ミニオン(ダークイリュージョン)(中級)5<br>ミニオン(カーリッツバーグ)(中級)5
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck1"></div>
+              <div>クエスト</div>
+              <div>2</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E6%9C%88%E5%A4%9C%E8%8A%B1%E3%81%AE%E6%82%AA%E5%A4%A2+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">月夜花の悪夢</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck2"></div>
+              <div>クエスト</div>
+              <div>3</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E5%80%9F%E9%87%91%E8%BF%94%E6%B8%88+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">借金返済</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck3"></div>
+              <div>クエスト</div>
+              <div>4</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E5%90%9F%E9%81%8A%E8%A9%A9%E4%BA%BA+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">吟遊詩人</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck4"></div>
+              <div>討伐</div>
+              <div>5</div>
+            </div>
+            <div>
+              混沌のポポリン5<br>混沌のバフォメット.Jr5
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck5"></div>
+              <div>クエスト</div>
+              <div>6</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E7%95%B0%E4%B8%96%E7%95%8C+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">異世界</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck6"></div>
+              <div>討伐</div>
+              <div>7</div>
+            </div>
+            <div>
+              魔眼のアムダライス
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck7"></div>
+              <div>討伐</div>
+              <div>8</div>
+            </div>
+            <div>
+              イエロークリスタル7<br>グリーンクリスタル7
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck8"></div>
+              <div>クエスト</div>
+              <div>9</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E7%A5%9E%E6%AE%BF%E7%99%BA%E6%8E%98%E5%9B%A3+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">オーディン神殿発掘団</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck9"></div>
+              <div>クエスト</div>
+              <div>10</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E9%89%84%E4%BA%BA%E6%96%99%E7%90%86%E9%95%B7%E3%83%8B%E3%83%A3%E3%82%B9%E3%81%AE%E4%BC%9D%E8%AA%AC+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">鉄人料理長ニャスの伝説</a></div>
+          </div>
+          <div class="delivery" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck10"></div>
+              <div>納品</div>
+              <div>11</div>
+            </div>
+            <div>
+              とてもかたい桃50<br>黒い熊の皮50
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck11"></div>
+              <div>クエスト</div>
+              <div>12</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E6%BB%85%E4%BA%A1%E7%A5%9D%E7%A6%8F%E6%95%99%E5%9B%A3+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">滅亡祝福教団</a></div>
+          </div>
+          <div class="etc" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck12"></div>
+              <div>その他</div>
+              <div>13</div>
+            </div>
+            <div>Lv170を達成する</div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck13"></div>
+              <div>クエスト</div>
+              <div>14</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%98%E3%83%AA%E3%82%AA%E3%83%B3+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">ヘリオン</a></div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck14"></div>
+              <div>討伐</div>
+              <div>15</div>
+            </div>
+            <div>
+              ミグエル
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck15"></div>
+              <div>クエスト</div>
+              <div>16</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E9%A3%9B%E8%A1%8C%E8%88%B9%E3%80%80%E7%AC%AC1%E9%83%A8+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">飛行船　第1部</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck16"></div>
+              <div>討伐</div>
+              <div>17</div>
+            </div>
+            <div>
+              怒りのアイスタイタン5<br>怒りのスノウアー5
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck17"></div>
+              <div>クエスト</div>
+              <div>18</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E7%94%9F%E6%85%8B%E7%A0%94%E7%A9%B6+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">生態研究</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck18"></div>
+              <div>討伐</div>
+              <div>19</div>
+            </div>
+            <div>
+              無名のアーチャー
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck19"></div>
+              <div>クエスト</div>
+              <div>20</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%82%B8%E3%83%A3%E3%83%86%E3%82%A3%E6%97%8F%E3%81%AE%E7%8E%8B%E5%86%A0+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">ジャティ族の王冠</a></div>
+          </div>
+          <div class="delivery" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck20"></div>
+              <div>納品</div>
+              <div>21</div>
+            </div>
+            <div>
+              ベアロピー25<br>ネジリアンのソウルストーン10
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck21"></div>
+              <div>討伐</div>
+              <div>22</div>
+            </div>
+            <div>
+              メイドの思念10
+            </div>
+          </div>
+          <div class="delivery" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck22"></div>
+              <div>納品</div>
+              <div>23</div>
+            </div>
+            <div>
+              油紙50<br>なめらかな紙50
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck23"></div>
+              <div>クエスト</div>
+              <div>24</div>
+            </div>
+            <div><a href="https://www.google.com/search?q=%E5%B7%A5%E5%A0%B4+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">工場</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck24"></div>
+              <div>クエスト</div>
+              <div>25</div>
+            </div>
+            <div><a href="https://www.google.com/search?q=The%20Sign+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">The Sign1部</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck25"></div>
+              <div>クエスト</div>
+              <div>26</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E6%B6%88%E3%81%88%E3%81%9F%E4%BD%8F%E6%B0%91%E3%81%A8%E3%83%90%E3%82%B3%E3%83%8A%E3%83%AF+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">消えた住民とバコナワ</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck26"></div>
+              <div>クエスト</div>
+              <div>27</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%A2%E3%83%A2%E3%82%BF%E3%83%AD%E4%BD%93%E9%A8%93%E9%A4%A8+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">モモタロ体験館</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck27"></div>
+              <div>討伐</div>
+              <div>28</div>
+            </div>
+            <div>
+              fff・ジターバグ
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="delivery" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck28"></div>
+              <div>納品</div>
+              <div>29</div>
+            </div>
+            <div>
+              微かな夢の欠片50<br>血の付いた恋文50
+            </div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck29"></div>
+              <div>討伐</div>
+              <div>30</div>
+            </div>
+            <div>
+              突撃赤バジルリスク50<br>突撃緑バジルリスク50
+            </div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck30"></div>
+              <div>討伐</div>
+              <div>31</div>
+            </div>
+            <div>
+              古代のバドン3<br>深海のカナトウス3<br>深海のカニ3
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck31"></div>
+              <div>クエスト</div>
+              <div>32</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E7%87%83%E6%96%99%E8%A3%9C%E7%B5%A6+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">燃料補給</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck32"></div>
+              <div>クエスト</div>
+              <div>33</div>
+            </div>
+            <div><a href="https://www.google.com/search?q=%E5%AE%9D%E7%9F%B3+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">宝石</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck33"></div>
+              <div>クエスト</div>
+              <div>34</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E9%AD%94%E7%8E%8B%E3%83%A2%E3%83%AD%E3%82%AF%E8%BF%BD%E8%B7%A1+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">魔王モロク追跡</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck34"></div>
+              <div>クエスト</div>
+              <div>35</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E7%9F%A5%E6%81%B5%E3%81%AE%E7%8E%8B%E3%81%AE%E6%8C%87%E8%BC%AA+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">知恵の王の指輪</a></div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck35"></div>
+              <div>クエスト</div>
+              <div>36</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E9%80%9A%E8%A1%8C%E8%A8%BC+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">通行証</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck36"></div>
+              <div>クエスト</div>
+              <div>37</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%82%A2%E3%83%A6%E3%82%BF%E3%83%A4%E3%83%80%E3%83%B3%E3%82%B8%E3%83%A7%E3%83%B3+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">アユタヤダンジョン</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck37"></div>
+              <div>討伐</div>
+              <div>38</div>
+            </div>
+            <div>
+              無名のソードマン（戦闘モード）（MVP）
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck38"></div>
+              <div>クエスト</div>
+              <div>39</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E5%9C%B0%E4%B8%8B%E6%B0%B4%E8%B7%AF%E8%A8%8E%E4%BC%90+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">地下水路討伐</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck39"></div>
+              <div>クエスト</div>
+              <div>40</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E9%80%9A%E8%A1%8C%E6%89%8B%E5%BD%A2+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">通行手形</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck40"></div>
+              <div>討伐</div>
+              <div>41</div>
+            </div>
+            <div>
+              ラウンドライダー30<br>サイドライダー30<br>ブレードライダー30
+            </div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck41"></div>
+              <div>討伐</div>
+              <div>42</div>
+            </div>
+            <div>
+              凶暴な警備犬4
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck42"></div>
+              <div>討伐</div>
+              <div>43</div>
+            </div>
+            <div>
+              堕ちた白の騎士5<br>腐敗した兵士35
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck43"></div>
+              <div>クエスト</div>
+              <div>44</div>
+            </div>
+            <div><a href="https://www.google.com/search?q=Z%E5%9B%A3+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">Z団</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck44"></div>
+              <div>クエスト</div>
+              <div>45</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E6%AD%B4%E5%8F%B2%E5%AD%A6%E8%80%85+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">歴史学者</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck45"></div>
+              <div>討伐</div>
+              <div>46</div>
+            </div>
+            <div>
+              暴走した船長ペルロック
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck46"></div>
+              <div>クエスト</div>
+              <div>47</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%8D%E3%82%B8%E3%83%AA%E3%82%A2%E3%83%B3%E5%B8%9D%E5%9B%BD%E3%81%AE%E9%99%B0%E8%AC%80+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">ネジリアン帝国の陰謀</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck47"></div>
+              <div>討伐</div>
+              <div>48</div>
+            </div>
+            <div>
+              ペル5
+            </div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoOneCheck48"></div>
+              <div>討伐</div>
+              <div>49</div>
+            </div>
+            <div>
+              パワフルスケルトン<br>パワフルSスケルトン<br>パワフルAスケルトン
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="parts" id="bingoTwoTable">
+  <table style="border: 1px solid #CCCCCC; font-size: 0.9em;">
+    <tr>
+      <th class="partsHeading">
+        <div class="table_head">
+          <div></div>
+          <div>ポリンビンゴ２</div>
+          <div style="display: flex; align-items: center; line-height: 14px;">
+            <div>全部にチェック/外す</div>
+            <input type="checkbox" name="allCheck2" style="width: 14px; height: 14px;">
+          </div>
+        </div>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="delivery" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck0"></div>
+              <div>納品</div>
+              <div>1</div>
+            </div>
+            <div>
+              葉っぱの服50<br>バンブーバスケット50
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck1"></div>
+              <div>クエスト</div>
+              <div>2</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E7%94%9F%E4%BD%93%E5%B7%A5%E5%AD%A6%E7%A0%94%E7%A9%B6%E6%89%80%E4%BE%B5%E5%85%A5+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">生体工学研究所侵入</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck2"></div>
+              <div>討伐</div>
+              <div>3</div>
+            </div>
+            <div>
+              怒りの九尾狐5<br>怨恨のソヒー5
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck3"></div>
+              <div>クエスト</div>
+              <div>4</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E9%A7%90%E5%B1%AF%E5%9C%B0%E3%81%AE%E4%BA%BA%E3%80%85+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">駐屯地の人々</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck4"></div>
+              <div>討伐</div>
+              <div>5</div>
+            </div>
+            <div>
+              サラの幻影
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck5"></div>
+              <div>クエスト</div>
+              <div>6</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E5%9C%B0%E4%B8%8B%E9%81%BA%E8%B7%A1%E3%82%A2%E3%83%89%E3%83%99%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">地下遺跡アドベンチャー</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck6"></div>
+              <div>討伐</div>
+              <div>7</div>
+            </div>
+            <div>
+              スイング・ペル4
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck7"></div>
+              <div>クエスト</div>
+              <div>8</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%82%AF%E3%82%B8%E3%83%A9%E5%B3%B6%E3%82%92%E8%A8%AA%E3%81%AD%E3%81%A6+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">クジラ島を訪ねて</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck8"></div>
+              <div>クエスト</div>
+              <div>9</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%AC%E3%83%99%E3%83%B3%E3%83%96%E3%83%AB%E3%82%B0%E5%AE%B6%E3%81%AE%E7%B5%86+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">レベンブルグ家の絆</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck9"></div>
+              <div>討伐</div>
+              <div>10</div>
+            </div>
+            <div>
+              おもちゃ工場警備兵5<br>包装されたボックス5
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck10"></div>
+              <div>クエスト</div>
+              <div>11</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%82%AD%E3%83%AB%E3%83%BB%E3%83%8F%E3%82%A4%E3%83%AB+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">キル・ハイル</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck11"></div>
+              <div>クエスト</div>
+              <div>12</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E7%A0%B4%E6%BB%85%E3%81%AE%E3%83%80%E3%82%A4%E3%83%A4%E3%83%A2%E3%83%B3%E3%83%89+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">破滅のダイヤモンド</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck12"></div>
+              <div>討伐</div>
+              <div>13</div>
+            </div>
+            <div>
+              フェンリル
+            </div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck13"></div>
+              <div>討伐</div>
+              <div>14</div>
+            </div>
+            <div>
+              暴虐のシーラカンス<br>変異のシーラカンス
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck14"></div>
+              <div>討伐</div>
+              <div>15</div>
+            </div>
+            <div>
+              死者のオークゾンビ15<br>死者のベリット15<br>死者のメガロドン15
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck15"></div>
+              <div>クエスト</div>
+              <div>16</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E6%96%B0%E4%BA%BA%E3%82%A2%E3%82%B3%E3%83%A9%E3%82%A4%E3%83%88%E3%81%AE%E5%B9%BD%E9%9C%8A+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">新人アコライトの幽霊</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck16"></div>
+              <div>クエスト</div>
+              <div>17</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E7%88%B6%E8%A6%AA%E6%8E%A2%E3%81%97+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">父親探し</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck17"></div>
+              <div>クエスト</div>
+              <div>18</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%AD%E3%83%83%E3%82%AF%E3%83%AA%E3%83%83%E3%82%B8+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">ロックリッジ</a></div>
+          </div>
+          <div class="etc" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck18"></div>
+              <div>その他</div>
+              <div>19</div>
+            </div>
+            <div>異形の迷宮</div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck19"></div>
+              <div>クエスト</div>
+              <div>20</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%82%B7%E3%83%89%E3%82%AF%E3%82%B9+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">シドクス</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck20"></div>
+              <div>クエスト</div>
+              <div>21</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E6%9C%88%E5%88%8A%E3%83%96%E3%83%AA%E3%82%AC%E3%83%B3+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">月刊ブリガン</a></div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck21"></div>
+              <div>討伐</div>
+              <div>22</div>
+            </div>
+            <div>
+              女騎士の思念7<br>白騎士の思念7
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck22"></div>
+              <div>クエスト</div>
+              <div>23</div>
+            </div>
+            <div><a href="https://www.google.com/search?q=%E9%AB%98%E5%8F%B0+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">高台</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck23"></div>
+              <div>討伐</div>
+              <div>24</div>
+            </div>
+            <div>
+              ハートハンターBC10<br>ハートハンターFW10
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck24"></div>
+              <div>クエスト</div>
+              <div>25</div>
+            </div>
+            <div><a href="https://www.google.com/search?q=The%20Sign+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">The Sign2部</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck25"></div>
+              <div>クエスト</div>
+              <div>26</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%82%BF%E3%83%BC%E3%83%88%E3%83%AB%E3%82%A2%E3%82%A4%E3%83%A9%E3%83%B3%E3%83%89+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">タートルアイランド</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck26"></div>
+              <div>クエスト</div>
+              <div>27</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E9%A3%9B%E8%A1%8C%E8%88%B9%E3%80%80%E7%AC%AC2%E9%83%A8+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">飛行船　第2部</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck27"></div>
+              <div>討伐</div>
+              <div>28</div>
+            </div>
+            <div>
+              アムダライス
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck28"></div>
+              <div>クエスト</div>
+              <div>29</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%87%E3%83%AF%E3%82%BF%E3%81%AE%E4%BC%9D%E7%B5%B1%E9%85%92+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">デワタの伝統酒</a></div>
+          </div>
+          <div class="etc" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck29"></div>
+              <div>その他</div>
+              <div>30</div>
+            </div>
+            <div>Lv175を達成する</div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck30"></div>
+              <div>クエスト</div>
+              <div>31</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%82%A2%E3%83%AB%E3%83%99%E3%83%AB%E3%82%BF%E3%81%AE%E5%B0%91%E5%B9%B4+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">アルベルタの少年</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck31"></div>
+              <div>クエスト</div>
+              <div>32</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E4%B8%83%E7%8E%8B%E5%AE%B6%E3%81%A8%E3%83%A6%E3%83%9F%E3%83%AB%E3%81%AE%E5%BF%83%E8%87%93+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">七王家とユミルの心臓</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck32"></div>
+              <div>討伐</div>
+              <div>33</div>
+            </div>
+            <div>
+              不死のウィンドゴースト<br>不死の呪われた騎士<br>不死のゾンビ50
+            </div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck33"></div>
+              <div>討伐</div>
+              <div>34</div>
+            </div>
+            <div>
+              白色のベアドール5<br>赤色のベアドール5
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck34"></div>
+              <div>クエスト</div>
+              <div>35</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%AC%E3%83%83%E3%82%B1%E3%83%B3%E3%83%99%E3%83%AB%E9%81%8B%E9%80%81+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">レッケンベル運送</a></div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck35"></div>
+              <div>クエスト</div>
+              <div>36</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%95%E3%82%A1%E3%83%B3%E3%82%BF%E3%82%B9%E3%83%9E%E3%82%B4%E3%83%AA%E3%82%AB+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">ファンタスマゴリカ</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck36"></div>
+              <div>討伐</div>
+              <div>37</div>
+            </div>
+            <div>
+              怨恨の兵士10<br>怨恨の弓兵10
+            </div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck37"></div>
+              <div>討伐</div>
+              <div>38</div>
+            </div>
+            <div>
+              真化カトリーヌ(上級)<br>真化マーガレッタ(上級)
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck38"></div>
+              <div>クエスト</div>
+              <div>39</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E6%9D%91%E9%95%B7%E3%81%AE%E5%89%A3+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">村長の剣</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck39"></div>
+              <div>クエスト</div>
+              <div>40</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E9%81%8B%E5%91%BD%E3%81%AE%E3%82%AB%E3%83%A9%E3%82%B9+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">運命のカラス</a></div>
+          </div>
+          <div class="delivery" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck40"></div>
+              <div>納品</div>
+              <div>41</div>
+            </div>
+            <div>
+              乾いた砂50<br>龍の歯50
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck41"></div>
+              <div>クエスト</div>
+              <div>42</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E4%BC%9A%E8%AD%B0%E3%81%AE%E3%81%8A%E3%81%A8%E3%82%82+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">会議のおとも</a></div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck42"></div>
+              <div>討伐</div>
+              <div>43</div>
+            </div>
+            <div>
+              大長老アイリン
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck43"></div>
+              <div>クエスト</div>
+              <div>44</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E6%96%B0%E4%BB%BB%E7%9C%8B%E8%AD%B7%E5%B8%AB%E3%81%A8%E7%97%85%E9%99%A2+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">新任看護師と病院</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck44"></div>
+              <div>クエスト</div>
+              <div>45</div>
+            </div>
+            <div><a href="https://www.google.com/search?q=%E6%81%8B%E4%BA%BA+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">恋人</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck45"></div>
+              <div>討伐</div>
+              <div>46</div>
+            </div>
+            <div>
+              レッドクリスタル7<br>ブルークリスタル7
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck46"></div>
+              <div>クエスト</div>
+              <div>47</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%95%E3%83%AD%E3%83%BC%E3%82%BA%E3%83%B3%E3%83%A1%E3%83%A2%E3%83%AA%E3%83%BC+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">フローズンメモリー</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck47"></div>
+              <div>討伐</div>
+              <div>48</div>
+            </div>
+            <div>
+              トップラウンドライダー5<br>トップサイドライダー5<br>トップブレードライダー5
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoTwoCheck48"></div>
+              <div>クエスト</div>
+              <div>49</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E5%A4%A7%E7%B5%B1%E9%A0%98%E3%80%80%E7%AC%AC1%E9%83%A8+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">大統領　第1部</a></div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="parts" id="bingoThreeTable">
+  <table style="border: 1px solid #CCCCCC; font-size: 0.9em;">
+    <tr>
+      <th class="partsHeading">
+        <div class="table_head">
+          <div></div>
+          <div>ポリンビンゴ３</div>
+          <div style="display: flex; align-items: center; line-height: 14px;">
+            <div>全部にチェック/外す</div>
+            <input type="checkbox" name="allCheck3" style="width: 14px; height: 14px;">
+          </div>
+        </div>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck0"></div>
+              <div>クエスト</div>
+              <div>1</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%AC%E3%82%B2%E3%83%B3%E3%82%B7%E3%83%A5%E3%83%AB%E3%83%A0%E7%A0%94%E7%A9%B6%E6%89%80+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">レゲンシュルム研究所</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck1"></div>
+              <div>クエスト</div>
+              <div>2</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%95%E3%83%AC%E3%82%A4%E3%83%A0%E3%83%B4%E3%82%A1%E3%83%AC%E3%83%BC%E3%81%B8%E3%81%AE%E9%81%93+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">フレイムヴァレーへの道</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck2"></div>
+              <div>クエスト</div>
+              <div>3</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%82%A8%E3%83%AB%E3%83%87%E3%82%A3%E3%82%AB%E3%82%B9%E3%83%86%E3%82%A3%E3%82%B9+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">エルディカスティス</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck3"></div>
+              <div>討伐</div>
+              <div>4</div>
+            </div>
+            <div>
+              ビジョウ
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck4"></div>
+              <div>クエスト</div>
+              <div>5</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E7%B4%AB%E8%89%B2%E3%81%AE%E7%AB%9C+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">紫色の竜</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck5"></div>
+              <div>討伐</div>
+              <div>6</div>
+            </div>
+            <div>
+              無名のマーチャント
+            </div>
+          </div>
+          <div class="delivery" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck6"></div>
+              <div>納品</div>
+              <div>7</div>
+            </div>
+            <div>
+              堅く固まった泥15<br>古のウータンファイターの毛15
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck7"></div>
+              <div>クエスト</div>
+              <div>8</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E6%A5%BD%E5%9C%92%E5%9B%A3%E7%99%BB%E9%8C%B2+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">楽園団登録</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck8"></div>
+              <div>討伐</div>
+              <div>9</div>
+            </div>
+            <div>
+              ハートハンター警備兵10
+            </div>
+          </div>
+          <div class="delivery" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck9"></div>
+              <div>納品</div>
+              <div>10</div>
+            </div>
+            <div>
+              極楽鳥の羽50<br>デワタドラゴンの皮50
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck10"></div>
+              <div>クエスト</div>
+              <div>11</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%93%E3%83%95%E3%83%AD%E3%82%B9%E3%83%88+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">ビフロスト</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck11"></div>
+              <div>討伐</div>
+              <div>12</div>
+            </div>
+            <div>
+              ツイン・カプトゥ（CP）7
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck12"></div>
+              <div>クエスト</div>
+              <div>13</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E5%8F%8C%E5%AD%90%E3%81%AE%E7%9C%9F%E5%AE%9F+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">双子の真実</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck13"></div>
+              <div>クエスト</div>
+              <div>14</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%9E%E3%83%8C%E3%82%AF%E3%81%AE%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E8%A8%8E%E4%BC%90+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">マヌクのモンスター討伐</a></div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck14"></div>
+              <div>クエスト</div>
+              <div>15</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E4%BA%8C%E3%81%A4%E3%81%AE%E7%A8%AE%E6%97%8F+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">二つの種族</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck15"></div>
+              <div>クエスト</div>
+              <div>16</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E9%AD%94%E8%A1%93+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro+%E3%83%97%E3%83%AD%E3%83%B3%E3%83%86%E3%83%A9"
+                target="_blank" rel="noopener noreferrer">魔術</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck16"></div>
+              <div>クエスト</div>
+              <div>17</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%90%E3%83%AB%E3%82%BF%E3%83%BC%E5%AE%B6%E3%81%AE%E8%AA%BF%E6%9F%BB+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">バルター家の調査</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck17"></div>
+              <div>討伐</div>
+              <div>18</div>
+            </div>
+            <div>
+              硬化ラーヴァゴーレム5<br>硬化ナイトメアテラー5
+            </div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck18"></div>
+              <div>討伐</div>
+              <div>19</div>
+            </div>
+            <div>
+              タフィー15<br>フローズンウルフ15
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck19"></div>
+              <div>クエスト</div>
+              <div>20</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%AC%E3%83%83%E3%82%B1%E3%83%B3%E3%83%99%E3%83%AB%E7%A4%BE%E3%81%AE%E5%99%82+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">レッケンベル社の噂</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck20"></div>
+              <div>討伐</div>
+              <div>21</div>
+            </div>
+            <div>
+              モルス・ネクロマンサー<br>モルス・魔導士
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck21"></div>
+              <div>クエスト</div>
+              <div>22</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%88%E3%82%A4%E3%83%AC%E3%81%AE%E3%82%AA%E3%83%90%E3%82%B1+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">トイレのオバケ</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck22"></div>
+              <div>討伐</div>
+              <div>23</div>
+            </div>
+            <div>
+              セリーヌ・キミ
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck23"></div>
+              <div>クエスト</div>
+              <div>24</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%82%A6%E3%82%A3%E3%82%B0%E3%83%8A%E3%83%BC%E5%AE%B6%E3%81%AE%E5%BF%83%E3%81%AE%E7%AE%B1+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">ウィグナー家の心の箱</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck24"></div>
+              <div>クエスト</div>
+              <div>25</div>
+            </div>
+            <div><a href="https://www.google.com/search?q=The%20Sign+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">The Sign3部</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck25"></div>
+              <div>クエスト</div>
+              <div>26</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E5%8F%8B%E9%81%94%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">友達のために</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck26"></div>
+              <div>クエスト</div>
+              <div>27</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E5%A4%A7%E7%A5%9E%E5%AE%98+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">大神官</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck27"></div>
+              <div>討伐</div>
+              <div>28</div>
+            </div>
+            <div>
+              ドロール（CP）7
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck28"></div>
+              <div>クエスト</div>
+              <div>29</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%AB%E3%83%AF%E3%83%B3%E3%83%80%E3%81%AB%E4%BC%9D%E3%81%88%E3%82%8B%E8%A9%B1+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">ルワンダに伝える話</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck29"></div>
+              <div>クエスト</div>
+              <div>30</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%86%E3%83%A9%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%AA%E3%82%A2+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">テラグローリア</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck30"></div>
+              <div>クエスト</div>
+              <div>31</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E5%AE%88%E8%AD%B7%E8%80%85+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">守護者</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck31"></div>
+              <div>クエスト</div>
+              <div>32</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%88%E3%83%BC%E3%83%AB%E7%81%AB%E5%B1%B1%E3%81%AE%E7%A7%98%E5%AF%86+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">トール火山の秘密</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck32"></div>
+              <div>討伐</div>
+              <div>33</div>
+            </div>
+            <div>
+              ダークフェイスワーム3
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck33"></div>
+              <div>クエスト</div>
+              <div>34</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E9%9A%A0%E3%81%95%E3%82%8C%E3%81%9F%E8%B2%A1%E5%AE%9D+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">隠された財宝</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck34"></div>
+              <div>討伐</div>
+              <div>35</div>
+            </div>
+            <div>
+              ハートハンター・ベラレ（CP）7
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck35"></div>
+              <div>クエスト</div>
+              <div>36</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E8%87%B3%E6%A5%B5%E3%81%AE%E5%AE%B4%E4%BC%9A%E6%96%99%E7%90%86+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">至極の宴会料理</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck36"></div>
+              <div>クエスト</div>
+              <div>37</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%82%AC%E3%83%A9%E3%83%8A+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">ガラナ</a></div>
+          </div>
+          <div class="delivery" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck37"></div>
+              <div>納品</div>
+              <div>38</div>
+            </div>
+            <div>
+              魂が宿った宝石25<br>雪玉25
+            </div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck38"></div>
+              <div>討伐</div>
+              <div>39</div>
+            </div>
+            <div>
+              魔神の使徒・アハト<br>魔神の使徒・シナイム
+            </div>
+          </div>
+          <div class="etc" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck39"></div>
+              <div>その他</div>
+              <div>40</div>
+            </div>
+            <div>Lv180を達成する</div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck40"></div>
+              <div>クエスト</div>
+              <div>41</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E7%8C%AB%E8%80%B3%E3%81%A8%E5%B0%BB%E5%B0%BE%E3%81%AE%E7%94%B7+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">猫耳と尻尾の男</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck41"></div>
+              <div>討伐</div>
+              <div>42</div>
+            </div>
+            <div>
+              不吉なアサルトタートル5<br>不吉なPタートル5
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck42"></div>
+              <div>討伐</div>
+              <div>43</div>
+            </div>
+            <div>
+              死神アンク
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck43"></div>
+              <div>クエスト</div>
+              <div>44</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E4%B8%8D%E9%81%8B%E3%81%AE%E3%82%A8%E3%83%A1%E3%83%A9%E3%83%AB%E3%83%89+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">不運のエメラルド</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck44"></div>
+              <div>討伐</div>
+              <div>45</div>
+            </div>
+            <div>
+              セリア=アルデ(三次職)5<br>エミュール=プラメール(三次職)5
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck45"></div>
+              <div>クエスト</div>
+              <div>46</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E4%B8%89%E3%83%B6%E5%9B%BD%E3%81%B8%E3%81%AE%E5%A0%B1%E5%91%8A%E6%9B%B8+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">三ヶ国への報告書</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck46"></div>
+              <div>クエスト</div>
+              <div>47</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E8%A8%80%E8%AA%9E%E7%BF%92%E5%BE%97+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">言語習得</a></div>
+          </div>
+          <div class="delivery" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck47"></div>
+              <div>納品</div>
+              <div>48</div>
+            </div>
+            <div>
+              ドケビの角50<br>ハーピーの羽50
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoThreeCheck48"></div>
+              <div>クエスト</div>
+              <div>49</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%A2%E3%83%BC%E3%83%A9%E3%81%AE%E6%B8%A9%E6%B3%89%E8%AA%BF%E6%9F%BB+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">モーラの温泉調査</a></div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="parts" id="bingoFourTable">
+  <table style="border: 1px solid #CCCCCC; font-size: 0.9em;">
+    <tr>
+      <th class="partsHeading">
+        <div class="table_head">
+          <div></div>
+          <div>ポリンビンゴ４</div>
+          <div style="display: flex; align-items: center; line-height: 14px;">
+            <div>全部にチェック/外す</div>
+            <input type="checkbox" name="allCheck4" style="width: 14px; height: 14px;">
+          </div>
+        </div>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck0"></div>
+              <div>クエスト</div>
+              <div>1</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E4%B8%8D%E5%90%89%E3%81%AA%E5%99%82+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">不吉な噂</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck1"></div>
+              <div>討伐</div>
+              <div>2</div>
+            </div>
+            <div>
+              イーブル
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck2"></div>
+              <div>クエスト</div>
+              <div>3</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E7%BE%8E%E3%81%97%E3%81%95%E3%81%AE%E4%BB%A3%E5%84%9F+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">美しさの代償</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck3"></div>
+              <div>クエスト</div>
+              <div>4</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E9%AD%94%E6%B3%95%E4%BD%BF%E3%81%84%E3%81%AE%E3%83%8E%E3%83%BC%E3%83%88+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">魔法使いのノート</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck4"></div>
+              <div>クエスト</div>
+              <div>5</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E9%BB%92%E3%81%84%E7%9F%B3+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">黒い石</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck5"></div>
+              <div>クエスト</div>
+              <div>6</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E6%82%A0%E4%B9%85%E3%81%AA%E3%82%8B%E7%B5%86+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">悠久なる絆</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck6"></div>
+              <div>討伐</div>
+              <div>7</div>
+            </div>
+            <div>
+              ターキーペコ15
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck7"></div>
+              <div>討伐</div>
+              <div>8</div>
+            </div>
+            <div>
+              サンタオーク10<br>サンタポリン10
+            </div>
+          </div>
+          <div class="etc" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck8"></div>
+              <div>その他</div>
+              <div>9</div>
+            </div>
+            <div>Lv185を達成する</div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck9"></div>
+              <div>クエスト</div>
+              <div>10</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%82%B9%E3%83%91%E3%82%A4%E7%96%91%E6%83%91+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">スパイ疑惑</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck10"></div>
+              <div>クエスト</div>
+              <div>11</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E9%9A%8A%E9%95%B7%E3%81%AE%E8%B4%96%E7%BD%AA+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">隊長の贖罪</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck11"></div>
+              <div>クエスト</div>
+              <div>12</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%AA%E3%83%B3+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">イルシオン</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck12"></div>
+              <div>討伐</div>
+              <div>13</div>
+            </div>
+            <div>
+              スウィートナイトメア5<br>マットドレインリアー5
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck13"></div>
+              <div>クエスト</div>
+              <div>14</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%82%A8%E3%82%AF%E3%83%A9%E3%83%BC%E3%82%B8%E3%83%A5%E3%81%AE%E7%8E%8B+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">エクラージュの王</a></div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck14"></div>
+              <div>クエスト</div>
+              <div>15</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%91%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E3%82%92%E6%8E%A2%E3%81%97%E3%81%A6+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">パトリックを探して</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck15"></div>
+              <div>討伐</div>
+              <div>16</div>
+            </div>
+            <div>
+              汚染されたレイドリック5<br>汚染されたスティング5
+            </div>
+          </div>
+          <div class="delivery" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck16"></div>
+              <div>納品</div>
+              <div>17</div>
+            </div>
+            <div>
+              ひとくちケーキ25<br>よく焼いたクッキー25
+            </div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck17"></div>
+              <div>討伐</div>
+              <div>18</div>
+            </div>
+            <div>
+              クリスマスクッキー10<br>ミストケース10
+            </div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck18"></div>
+              <div>討伐</div>
+              <div>19</div>
+            </div>
+            <div>
+              EL-A17T
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck19"></div>
+              <div>クエスト</div>
+              <div>20</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E5%A9%9A%E7%B4%84%E8%80%85%E6%8E%A2%E3%81%97+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">婚約者探し</a></div>
+          </div>
+          <div class="delivery" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck20"></div>
+              <div>納品</div>
+              <div>21</div>
+            </div>
+            <div>
+              短い蝙蝠の毛15<br>悪夢の塊15
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck21"></div>
+              <div>討伐</div>
+              <div>22</div>
+            </div>
+            <div>
+              S・J・アーネストウルフ
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck22"></div>
+              <div>クエスト</div>
+              <div>23</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E8%81%96%E5%9F%9F%E3%81%AE%E7%A7%98%E5%AF%86+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">聖域の秘密</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck23"></div>
+              <div>討伐</div>
+              <div>24</div>
+            </div>
+            <div>
+              アンソニ5
+            </div>
+          </div>
+          <div class="etc" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck24"></div>
+              <div>その他</div>
+              <div>25</div>
+            </div>
+            <div>試練の迷宮<br>封印の迷宮<br>のいずれかをクリアする</div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck25"></div>
+              <div>クエスト</div>
+              <div>26</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E5%9C%B0%E5%85%83%E9%A8%8E%E5%A3%AB%E5%9B%A3%EF%BD%9E%E9%9C%A7%E3%81%AE%E6%A3%AE%EF%BD%9E+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">地元騎士団～霧の森～</a></div>
+          </div>
+          <div class="delivery" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck26"></div>
+              <div>納品</div>
+              <div>27</div>
+            </div>
+            <div>
+              黒い魂の欠片15<br>古い甲羅25
+            </div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck27"></div>
+              <div>討伐</div>
+              <div>28</div>
+            </div>
+            <div>
+              呪いを呑み込んだ王
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="delivery" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck28"></div>
+              <div>納品</div>
+              <div>29</div>
+            </div>
+            <div>
+              ババヤガのきね50<br>歌う草10
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck29"></div>
+              <div>クエスト</div>
+              <div>30</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E5%86%92%E9%99%BA%E8%80%85%E9%81%94%E3%81%A8%E3%81%AE%E5%87%BA%E4%BC%9A%E3%81%84+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">冒険者達との出会い</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck30"></div>
+              <div>討伐</div>
+              <div>31</div>
+            </div>
+            <div>
+              セイレン=ウィンザー(三次職)5<br>マーガレッタ=ソリン(三次職)5
+            </div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck31"></div>
+              <div>討伐</div>
+              <div>32</div>
+            </div>
+            <div>
+              サンタスモーキー10<br>靴下スモーキー10
+            </div>
+          </div>
+          <div class="delivery" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck32"></div>
+              <div>納品</div>
+              <div>33</div>
+            </div>
+            <div>
+              穴が開いている赤い靴下10<br>プレゼントボックス10
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck33"></div>
+              <div>クエスト</div>
+              <div>34</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E6%80%9D%E3%81%84%E5%87%BA%E3%81%AE%E6%9C%A8+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">思い出の木</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck34"></div>
+              <div>クエスト</div>
+              <div>35</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E4%BF%AE%E9%81%93%E9%99%A2(%E5%90%8D%E3%82%82%E3%81%AA%E3%81%8D%E5%B3%B6%E5%85%A5%E5%A0%B4)+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">修道院(名もなき島入場)</a></div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck35"></div>
+              <div>クエスト</div>
+              <div>36</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E3%83%AD%E3%83%9A%E3%81%AE%E6%8D%9C%E7%B4%A2+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">ロペの捜索</a></div>
+          </div>
+          <div class="delivery" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck36"></div>
+              <div>納品</div>
+              <div>37</div>
+            </div>
+            <div>
+              偽装缶詰30
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck37"></div>
+              <div>クエスト</div>
+              <div>38</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E6%A3%AE%E3%81%AE%E4%B8%AD%E3%81%AE%E7%A7%98%E5%AF%86+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">森の中の秘密</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck38"></div>
+              <div>討伐</div>
+              <div>39</div>
+            </div>
+            <div>
+              古のメガリス5<br>古のフレイムシューター5
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck39"></div>
+              <div>クエスト</div>
+              <div>40</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E6%96%99%E7%90%86%E4%BD%9C%E6%88%90+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">料理作成</a></div>
+          </div>
+          <div class="delivery" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck40"></div>
+              <div>納品</div>
+              <div>41</div>
+            </div>
+            <div>
+              ジェジェゼロピー40<br>清楚な花40
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck41"></div>
+              <div>クエスト</div>
+              <div>42</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E5%90%8D%E5%89%8D%E3%81%AF%E3%82%A2%E3%82%B5%E3%83%92+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">名前はアサヒ</a></div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="td-flex">
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck42"></div>
+              <div>討伐</div>
+              <div>43</div>
+            </div>
+            <div>
+              Y.S.F.0.1セイレン
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck43"></div>
+              <div>クエスト</div>
+              <div>44</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E9%99%BD%E5%B1%85%E6%9D%91%E3%81%AE%E5%B9%BD%E9%9C%8A%E5%B0%91%E5%A5%B3+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">陽居村の幽霊少女</a></div>
+          </div>
+          <div class="delivery" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck44"></div>
+              <div>納品</div>
+              <div>45</div>
+            </div>
+            <div>
+              虹色のゼリーの欠片60<br>謎の樹液60
+            </div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck45"></div>
+              <div>クエスト</div>
+              <div>46</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E5%A4%A7%E7%B5%B1%E9%A0%98%E3%80%80%E7%AC%AC2%E9%83%A8+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">大統領　第2部</a></div>
+          </div>
+          <div class="quest" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck46"></div>
+              <div>クエスト</div>
+              <div>47</div>
+            </div>
+            <div><a
+                href="https://www.google.com/search?q=%E5%A1%94%E3%81%AE%E4%B8%AD%E3%81%AE%E5%86%92%E9%99%BA%E8%80%85+%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88+ro"
+                target="_blank" rel="noopener noreferrer">塔の中の冒険者</a></div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck47"></div>
+              <div>討伐</div>
+              <div>48</div>
+            </div>
+            <div>
+              ジャッククリスマス10<br>クリスマスゴブリン10
+            </div>
+          </div>
+          <div class="defeat" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+            <div class="head_div">
+              <div><input type="checkbox" name="bingoFourCheck48"></div>
+              <div>討伐</div>
+              <div>49</div>
+            </div>
+            <div>
+              T_W_O
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
+
+</html>
+
+<style type="text/css">
+  .td-flex {
+    margin: 0 -1px;
+  }
+
+  .td-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .td-flex>div {
+    margin: -1px 0px;
+  }
+
+  .td-flex>div>div:last-child {
+    padding: 2px;
+  }
+
+  .etc {
+    background-color: #ffffff;
+  }
+
+  .quest {
+    background-color: #eeffdd;
+  }
+
+  .delivery {
+    background-color: #ddeeff;
+  }
+
+  .defeat {
+    background-color: #ffddee;
+  }
+
+  div.parts {
+    margin: 2px 2px 0 10px;
+    display: inline-block;
+  }
+
+  div.parts table {
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  th {
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #CCCCCC;
+    background-color: #c6def6;
+  }
+
+  div.parts td>div>div {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+  }
+
+  div.parts tr th:first-child,
+  div.parts tr td:first-child,
+  div.parts tr th.first-child,
+  div.parts tr td.first-child {
+    border-left-width: 0;
+  }
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    empty-cells: show;
+    margin: 0 0 10px 0;
+  }
+
+  th,
+  td {
+    vertical-align: middle;
+  }
+
+  body {
+    font: normal normal normal 10pt/1.2 "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", Osaka, sans-serif;
+  }
+
+  input,
+  textarea,
+  select {
+    color: #333333;
+    font-size: inherit;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", Osaka, sans-serif;
+  }
+
+  input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  }
+
+  .head_div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  .head_div>div:nth-child(2) {
+    font-weight: bold;
+  }
+
+  .head_div>div:nth-child(3) {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 5px;
+    margin-left: auto;
+  }
+
+  .table_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5px;
+  }
+
+  .table_head>div {
+    width: 100%;
+  }
+
+  .table_head>div:last-child {
+    justify-content: flex-end;
+  }
+</style>

@@ -1,0 +1,30 @@
+{
+  "name": "ROSNS拡張 for 18周年",
+  "version": "1.4.0",
+  "manifest_version": 2,
+  "description": "jRO SNS database crawler for jRO's 18th anniversary quests",
+  "icons": {
+    "16":"fav16.png",
+    "48":"fav48.png"
+  },
+  "browser_action": {
+    "default_icon": "fav16.png",
+    "default_title": "ROSNSからポリンビンゴクエスト進行を確認",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [ "background.js" ]
+  },
+  "content_scripts": [{
+    "matches": ["https://sns.gungho.jp/ro/*"],
+    "js": [
+      "questTable.js",
+      "prototype.js",
+      "script.js"
+    ]
+  }],
+  "options_page": "checker.html",
+  "permissions": [
+    "storage"
+  ]
+}
